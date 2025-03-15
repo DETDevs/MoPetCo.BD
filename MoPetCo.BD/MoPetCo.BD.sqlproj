@@ -60,4 +60,12 @@
     <Folder Include="dbo\Stored Procedures" />
     <Folder Include="dbo\Tables" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Contacto.sql" />
+    <Build Include="dbo\Tables\Servicio.sql" />
+    <Build Include="dbo\Tables\RangoPeso.sql" />
+    <Build Include="dbo\Tables\Precio.sql" />
+    <Build Include="dbo\Tables\Video.sql" />
+    <Build Include="dbo\Tables\Imagen.sql" />
+  </ItemGroup>
 </Project>
