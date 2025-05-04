@@ -1,7 +1,12 @@
-﻿CREATE TABLE [dbo].[RangoPeso]
+﻿CREATE TABLE [dbo].[RangoPeso](
+	[IdRango] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] [varchar](50) NOT NULL,
+	[PesoMin] [decimal](5, 2) NOT NULL,
+	[PesoMax] [decimal](5, 2) NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[RangoPeso] ADD PRIMARY KEY CLUSTERED 
 (
-	IdRango INT IDENTITY(1,1) PRIMARY KEY,
-    Nombre VARCHAR(50) NOT NULL, -- Ej: Small, ExtraSmall
-    PesoMin DECIMAL(5,2) NOT NULL,
-    PesoMax DECIMAL(5,2) NOT NULL
-)
+	[IdRango] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO

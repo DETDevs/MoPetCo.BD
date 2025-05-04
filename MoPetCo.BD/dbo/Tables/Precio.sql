@@ -1,9 +1,25 @@
-﻿CREATE TABLE [dbo].[Precio]
+﻿CREATE TABLE [dbo].[Precio](
+	[IdPrecio] [int] IDENTITY(1,1) NOT NULL,
+	[Monto] [varchar](50) NOT NULL,
+	[IdRangoPrecio] [int] NOT NULL,
+	[IdServicio] [int] NULL,
+	[IdSubServicio] [int] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Precio] ADD PRIMARY KEY CLUSTERED 
 (
-	IdPrecio INT IDENTITY(1,1) PRIMARY KEY,
-    Monto DECIMAL(10,2) NOT NULL,
-    IdRangoPrecio INT NOT NULL,
-    IdServicio INT NOT NULL,
-    CONSTRAINT FK_Precio_Rango FOREIGN KEY (IdRangoPrecio) REFERENCES RangoPeso(IdRango) ON DELETE CASCADE,
-    CONSTRAINT FK_Precio_Servicio FOREIGN KEY (IdServicio) REFERENCES Servicio(IdServicio) ON DELETE CASCADE
-)
+	[IdPrecio] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Precio]  WITH CHECK ADD  CONSTRAINT [FK_Precio_Rango] FOREIGN KEY([IdRangoPrecio])
+REFERENCES [dbo].[RangoPeso] ([IdRango])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[Precio] CHECK CONSTRAINT [FK_Precio_Rango]
+GO
+ALTER TABLE [dbo].[Precio]  WITH CHECK ADD  CONSTRAINT [FK_Precio_Servicio] FOREIGN KEY([IdServicio])
+REFERENCES [dbo].[Servicio] ([IdServicio])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[Precio] CHECK CONSTRAINT [FK_Precio_Servicio]
+GO

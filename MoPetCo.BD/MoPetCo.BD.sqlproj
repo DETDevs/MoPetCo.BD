@@ -78,5 +78,7 @@
     <Build Include="dbo\Stored Procedures\sp_Video_Listar.sql" />
     <Build Include="dbo\Stored Procedures\sp_Imagen_Guardar.sql" />
     <Build Include="dbo\Stored Procedures\sp_Imagen_Listar.sql" />
+    <Build Include="dbo\Tables\Promotions.sql" />
+    <Build Include="dbo\Tables\SubServicio.sql" />
   </ItemGroup>
 </Project>
