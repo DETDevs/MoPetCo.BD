@@ -1,6 +1,7 @@
 ﻿-- ========================================================
 -- Author:        Douglas Hernández
 -- Create date:   14/03/2025
+-- Last modification:   03/05/2025
 -- Description:   SP para listar los videos
 -- ========================================================
 CREATE PROCEDURE [dbo].[sp_Video_Listar]
@@ -9,7 +10,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
     BEGIN TRY
-        SELECT IdVideo, Descripcion, UrlVideo
+         SELECT IdVideo, Descripcion, UrlVideo, Tipo
         FROM Video
         WHERE (@IdVideo IS NULL OR IdVideo = @IdVideo);
     END TRY

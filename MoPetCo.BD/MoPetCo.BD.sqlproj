@@ -80,5 +80,10 @@
     <Build Include="dbo\Stored Procedures\sp_Imagen_Listar.sql" />
     <Build Include="dbo\Tables\Promotions.sql" />
     <Build Include="dbo\Tables\SubServicio.sql" />
+    <Build Include="dbo\Stored Procedures\GetPromotionsForHomePage.sql" />
+    <Build Include="dbo\Stored Procedures\GetPromotionsForPromotionsPage.sql" />
+    <Build Include="dbo\Stored Procedures\InsertPromotion.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ServicioDetalles_Listar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SubServicioDetalles_Listar.sql" />
   </ItemGroup>
 </Project>
