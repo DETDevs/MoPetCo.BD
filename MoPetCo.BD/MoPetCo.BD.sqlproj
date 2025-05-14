@@ -60,4 +60,30 @@
     <Folder Include="dbo\Stored Procedures" />
     <Folder Include="dbo\Tables" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Contacto.sql" />
+    <Build Include="dbo\Tables\Servicio.sql" />
+    <Build Include="dbo\Tables\RangoPeso.sql" />
+    <Build Include="dbo\Tables\Precio.sql" />
+    <Build Include="dbo\Tables\Video.sql" />
+    <Build Include="dbo\Tables\Imagen.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Contacto_Guardar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Servicio_Guardar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Servicio_Listar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RangoPeso_Guardar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RangoPeso_Listar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Precio_Guardar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Precio_Listar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Video_Guardar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Video_Listar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Imagen_Guardar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Imagen_Listar.sql" />
+    <Build Include="dbo\Tables\Promotions.sql" />
+    <Build Include="dbo\Tables\SubServicio.sql" />
+    <Build Include="dbo\Stored Procedures\GetPromotionsForHomePage.sql" />
+    <Build Include="dbo\Stored Procedures\GetPromotionsForPromotionsPage.sql" />
+    <Build Include="dbo\Stored Procedures\InsertPromotion.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ServicioDetalles_Listar.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SubServicioDetalles_Listar.sql" />
+  </ItemGroup>
 </Project>
